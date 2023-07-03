@@ -338,13 +338,22 @@ main {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
-  padding: 30px;
+  padding: 50px;
 }
 
 .project_description:hover {
   opacity: 0.8;
   transform: translateY(0px);
   color: #fff;
+}
+
+.project_content span {
+  display: block;
+  padding: 3px 0;
+}
+
+.project_description h2 {
+  margin-bottom: 20px;
 }
 
 /* Footer */
