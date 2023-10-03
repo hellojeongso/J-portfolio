@@ -10,7 +10,7 @@
   }
 
   .title {
-    font-size: var(--font-semi-large);
+    font-size: 60px;
     margin-bottom: 30px;
   }
 
@@ -139,9 +139,13 @@
 
 
   /* Footer */
-  .footer-set {
+  footer {
+    height: auto;
+  }
+   .footer-set {
     flex-direction: column;
     width: 100%;
+    height: 100%;
   }
 
   .send {
@@ -155,7 +159,6 @@
 
   .check p:nth-child(1) {
     padding: 10px 0;
-    font-size: var(--font-micro);
   }
 
   .check p:nth-child(2) {
@@ -166,12 +169,15 @@
     width: 100%;
   }
 
-  .copyright {
-    font-size: 14px;
+  .btns button span {
+    font-size: var(--font-regular);
+  } 
+
+  .btns {
+      width: 100%;
   }
 
   .custom-btn {
-    width: 100%;
-  }
-
+      width: 100%;
+  } 
 }

@@ -42,3 +42,8 @@ $(function(){
     ]
   });
 })
+
+function clickEvent(){
+	alert('준비중입니다.');
+}
+
