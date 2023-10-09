@@ -1,13 +1,24 @@
 $(function(){
+
   // 스크롤시 메뉴색 변경
   var $header = $('header');
+
   $(window).scroll(function(){
-      if($(this).scrollTop() > 600){
-          $header.find('nav ul li a').addClass('menu_black');
-      } else {
-          $header.find('nav ul li a').removeClass('menu_black');
-      }
+    var scrollTop = $(window).scrollTop();
+
+    if($(this).scrollTop() > 600){
+      $header.find('nav ul li a').addClass('menu_black');
+    } else {
+      $header.find('nav ul li a').removeClass('menu_black');
+    }
+
+    var containerHeight = $("main").height();
+
+    if (scrollTop + $(window).height() >= containerHeight) {
+      $header.find('nav ul li a').removeClass('menu_black');
+    }
   });
+
 
   // 슬라이드
   $('.myslider').slick({
@@ -44,6 +55,6 @@ $(function(){
 })
 
 function clickEvent(){
-	alert('준비중입니다.');
+  alert('준비중입니다.');
 }
 

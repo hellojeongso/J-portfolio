@@ -11,10 +11,9 @@
 
   .title {
     font-size: 60px;
-    margin-bottom: 30px;
   }
 
-  /* Intro */
+/***** Intro *****/
   .intro h1 p {
     width: 100%;
   }
@@ -52,11 +51,7 @@
   }
 
 
-  /* About */
-  .about {
-    padding: 50px 0;
-  }
-
+/***** About *****/
   .about-set {
     flex-direction: column;
   }
@@ -119,11 +114,7 @@
     font-size: var(--font-medi-regular);
   }
 
-  /* Project */
-  .project {
-    padding: 80px 0;
-  }
-
+/***** Project *****/
   .myslider {
     width: 100%;
     height: 100%;
@@ -138,30 +129,31 @@
   }
 
 
-  /* Footer */
-  footer {
+/***** Contact *****/
+  .contact {
     height: auto;
   }
-   .footer-set {
+
+  .contact-set {
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
 
-  .send {
+  .contact-form {
     width: 100%;
     padding: 20px;
   }
 
-  .info-entry input {
+  .contact-form-group-info input {
     width: 100%;
   }
 
-  .check p:nth-child(1) {
+  .contact-form-check p:nth-child(1) {
     padding: 10px 0;
   }
 
-  .check p:nth-child(2) {
+  .contact-form-check p:nth-child(2) {
     width: 100%;
   }
 
@@ -169,11 +161,11 @@
     width: 100%;
   }
 
-  .btns button span {
+  .contact-form-btn button span {
     font-size: var(--font-regular);
   } 
 
-  .btns {
+  .contact-form-btn {
       width: 100%;
   }
 
