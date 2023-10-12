@@ -411,16 +411,6 @@ nav ul li a.menu_black{
   margin: 15px 0 10px 0px;
 }
 
-.contact-form-check p:nth-child(2) {
-  display: inline-block;
-  width: 600px;
-  background-color: var(--color-dark-white);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 15px 0;
-  color: var(--color-black);
-}
-
 textarea {
   width: 600px;
 }

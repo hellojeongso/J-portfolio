@@ -21,10 +21,10 @@
 </head>
 <body>
     <header>
-      <div class="header-wrap">   
+      <div class="header-wrap" id="intro">   
           <nav id="navbar">
             <ul class="menu">
-              <li><a href="#">Intro</a></li>
+              <li><a href="#intro">Intro</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#project">Project</a></li>
               <li><a href="#contact">Contact</a></li>
@@ -346,10 +346,10 @@
               </ul>
               <div class="contact-info-links">
                 <a href="https://github.com/hellojeongso" target="blank">
-                  <i class="fab fa-github fa-2x"></i>
+                  -<i class="fab fa-github fa-2x"> </i>
                 </a>
                 <a href="https://neat-tent-d50.notion.site/93d16b533d814cb68bd774305e9b2987" target="blank">
-                  <i class="fa-solid fa-blog fa-2x"></i>
+                  -<i class="fa-solid fa-blog fa-2x"> </i>
                 </a>
               </div>
             </div>
@@ -358,28 +358,29 @@
                 <div>
                   <div class="contact-form-group">
                     <div class="contact-form-group-info">
-                      <label>Name</label>
-                      <input type="text">
+                      <label for="name">Name</label>
+                      <input type="text" id="name">
                     </div>
                   </div>
                   <div class="contact-form-group">
                     <div class="contact-form-group-info">
-                      <label>Email</label>
-                      <input type="text">
+                      <label for="email">Email</label>
+                      <input type="text" id="email">
                     </div>
                   </div>
                   <div class="contact-form-group">
                     <div class="contact-form-group-info">
-                      <label>Subject</label>
-                      <input type="text">
+                      <label for="subject">Subject</label>
+                      <input type="text" id="subject">
                     </div>
                   </div>
                 </div>
                 <div class="contact-form-check">
                   <p>본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보(이메일)를 제공할 것을 동의합니다.</p>
-                  <p>개인정보 수집 내용에 동의합니다. <input type="checkbox" checked></p>
+                  <label for="form-check"><span>개인정보 수집 내용에 동의합니다.</span><input type="checkbox" id="form-check" checked></label>
                 </div>
-                <textarea cols="88" rows="10"></textarea>
+                <label for="form-insert"></label>
+                <textarea cols="88" rows="10" id="form-insert"></textarea>
                 <div class="contact-form-btn">
                   <button class="custom-btn send-btn" onclick="clickEvent();">
                     <span>보내기</span>
