@@ -18,7 +18,9 @@
   animation:star 3s linear infinite;
 }
 
-.star span:before{
+
+/* 별줄기 */
+.star span:before {
   content:'';
   display:block;
   position:absolute;
@@ -27,7 +29,8 @@
   height:1px;
   transform:translateY(-50%);
   background:linear-gradient(90deg, #fff, transparent);
-}
+}  
+
 
 @keyframes star {
   0%{
@@ -69,6 +72,7 @@
   left:100%;
   animation-duration:3s;
 }
+
 .star span:nth-child(6){
   top:-50px;
   left:120%;

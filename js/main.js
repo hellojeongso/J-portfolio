@@ -1,60 +1,48 @@
-$(function(){
+AOS.init(); 
+$('[data-aos]').each(function(){
+     $(this).addClass("aos-init"); 
+});
 
-  // 스크롤시 메뉴색 변경
-  var $header = $('header');
+$('#fullpage').fullpage({
+  anchors: ['section0','section1','section2', 'section3', 'section4', 'section5', 'section6'],
+  sectionsColor : ['#112d42', '#f9f7f7','#dbe2ef','#3f72af', '#dbe2ef', '#3f72af','#f9f7f7','#112d42'],
+  slidesNavigation: true,
+  responsiveWidth: 768,
+  controlArrows: false,
+  onLeave: function(){
+      $('.section [data-aos]').each(function(){
+          $(this).removeClass("aos-animate")
+      });
+  }, // 화면 전환 직전에 실행
+  onSlideLeave: function(){
+      $('.slide [data-aos]').each(function(){
+          $(this).removeClass("aos-animate")
+      });
+  }, // 슬라이드 전환 직전에 실행
+  afterSlideLoad: function(){
+      $('.slide.active [data-aos]').each(function(){
+          $(this).addClass("aos-animate")
+      });
+  }, // 슬라이드 화면이 전환되고 난 후에 실행
+  afterLoad: function(){
+      $('.section.active [data-aos]').each(function(){
+          $(this).addClass("aos-animate")
+      });
+  }}); // 풀페이지 화면이 전환되고나서 실행
 
-  $(window).scroll(function(){
-    var scrollTop = $(window).scrollTop();
+  $(function(){
+    // Trigger 
+    $('.trigger').click(function(){
 
-    if($(this).scrollTop() > 600){
-      $header.find('nav ul li a').addClass('menu_black');
-    } else {
-      $header.find('nav ul li a').removeClass('menu_black');
-    }
-
-    var containerHeight = $("main").height();
-
-    if (scrollTop + $(window).height() >= containerHeight) {
-      $header.find('nav ul li a').removeClass('menu_black');
-    }
-  });
-
-
-  // 슬라이드
-  $('.myslider').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-})
-
-function clickEvent(){
-  alert('준비중입니다.');
-}
+      $(this).toggleClass('active')
+      $('.gnb').toggleClass('active')
+      $(".overlay").fadeToggle();
+        console.log("오버레이");
+    })
+  
+    $('.gnb a').click(function(){
+      $('.gnb, .trigger').removeClass('active')
+      $(".overlay").fadeOut();
+    })
+  })
 
