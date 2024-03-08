@@ -4,8 +4,8 @@ $('[data-aos]').each(function(){
 });
 
 $('#fullpage').fullpage({
-  anchors: ['section0','section1','section2', 'section3', 'section4', 'section5', 'section6'],
-  sectionsColor : ['#112d42', '#f9f7f7','#dbe2ef','#3f72af', '#dbe2ef', '#3f72af','#f9f7f7','#112d42'],
+  anchors: ['section0','section1','section2', 'section3', 'section4', 'section5', 'section6','section7'],
+  sectionsColor : ['#112d42', '#f9f7f7','#dbe2ef','#3f72af', '#dbe2ef', '#3f72af','#dbe2ef','#f9f7f7','#112d42'],
   slidesNavigation: true,
   responsiveWidth: 768,
   controlArrows: false,
